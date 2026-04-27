@@ -62,7 +62,7 @@ function MiniMap({ locations }) {
 
     const L = window.L
 
-    const updateMarkers = async () => {
+    /*const updateMarkers = async () => {
       // Remove old markers and polyline
       markersRef.current.forEach(m => m.remove())
       markersRef.current = []
@@ -135,6 +135,15 @@ function MiniMap({ locations }) {
       } else if (coords.length > 1) {
         map.fitBounds(L.latLngBounds(coords), { padding: [30, 30] })
       }
+    }*/
+  const updateMarkers = async () => {
+      markersRef.current.forEach(m => m.remove())
+      markersRef.current = []
+      if (polylineRef.current) {
+        polylineRef.current.remove()
+        polylineRef.current = null
+      }
+      map.setView([39.5, -98.35], 3)
     }
 
     updateMarkers()

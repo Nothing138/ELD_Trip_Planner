@@ -2,6 +2,7 @@ import { useState } from 'react'
 import TripForm from './components/TripForm'
 import ELDLog from './components/ELDLog'
 import MapView from './components/MapView'
+import RouteInstructions from './components/RouteInstructions'
 import './index.css'
 
 function App() {
@@ -115,6 +116,7 @@ function App() {
               {[
                 { id: 'map', label: '🗺️ Route Map', },
                 { id: 'logs', label: '📋 ELD Logs', },
+                { id: 'instructions', label: '🧭 Route Instructions' },
               ].map(tab => (
                 <button
                   key={tab.id}
@@ -191,6 +193,7 @@ function App() {
             {/* Tab Content */}
             {activeTab === 'map' && <MapView tripData={tripData} />}
             {activeTab === 'logs' && <ELDLog tripData={tripData} />}
+            {activeTab === 'instructions' && <RouteInstructions tripData={tripData} />}
           </div>
         )}
       </div>
