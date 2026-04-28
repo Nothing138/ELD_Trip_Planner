@@ -6,7 +6,7 @@ import MapView from './components/MapView'
 import RouteInstructions from './components/RouteInstructions'
 import './index.css'
 
-const API_URL = 'http://127.0.0.1:8000/api'
+const API_URL = 'https://eld-trip-planner-w6mx.onrender.com/api'
 
 // ─── Trip History Panel ───────────────────────────────────────────
 function TripHistory({ onLoadTrip }) {

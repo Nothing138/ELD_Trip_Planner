@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 
-const API_URL = 'http://127.0.0.1:8000/api'
+const API_URL = 'https://eld-trip-planner-w6mx.onrender.com/api'
 
 function MiniMap({ locations }) {
   const mapRef = useRef(null)
